@@ -3,38 +3,48 @@
 <head>
 
 <!--Replace with your name-->
-<title>Page Title</title>
+<title>Kostya's homework</title>
+    <link rel="stylesheet" href="css1.css">
 </head>
 <body>
 	<!-- Replace placeholder with your name -->
-	<h1>Name's Profile</h1>
+	<h1>Kostya's "profile"</h1>
 	<!-- Replace with a list of your favourite vacation destinations (at least 3) -->
-	<ul>
-    <li>
-<!--    Add first place name/description-->
-        <p>This is a paragraph.</p>
-<!--        Add link to that place -->
-        <a href="https://www.google.com/">
-            Name
-        </a>
-    </li>
+
+    <h2>Favorite destinations</h2>
+    <ul>
+        <li>
+            <a href ="https://maps.app.goo.gl/hnFa2fdQukLSkcYN9" target="_blank"> <img src="/images/duke_statue.jpg" style="width:500px;" alt="The Duke"><p>&nbsp;Waikiki, O'Ahu</p></a>
+        </li>
+
+        <li>
+            <a href ="https://maps.app.goo.gl/NTG67dvPNJwuLaBN9" target="_blank"> <img src="/images/pahrump1.jpg" style="width:500px;" alt="HNY"><p>&nbsp;Pahrump, Nevada</p></a>
+        </li>
+
+
     <!-- And so on  -->
 </ul>
 <p>
-	<h2>My favourite Food</h2>
-	<img src="yourImage.jpg">
+	<h2>My favourite Food: dumplings</h2>
+	<img src="/images/pelmeni3.jpg" style="width:600px;">
 </p>
 
     <!-- Optional -->
     <!-- Create your own page that will be redirected to after clicking a button -->
-    <form action="yourPage.html" method="post">
+    <form action="dumplings.html" method="get">
 
         <div class="container">
-            <p>
+            <h3>
                 <!--          Add either checkbox/dropdown/input or radioButton related to your profile-->
-            </p>
+                Want to see more dumplings?
+            </h3>
+            <input type="radio" name="response" value="Yes">
+            <label> Sure? </label><br>
+            <input type="radio" name="response" value="No">
+            <label> Maybe some other time </label><br>
 
-            <button type="submit">Let's Go!</button>
+            <p></p>
+            <button type="submit">Submit</button>
         </div>
     </form>
 </body>

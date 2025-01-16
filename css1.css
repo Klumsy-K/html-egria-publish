@@ -1,11 +1,42 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body {
+background-color: wheat;
+font-family: system-ui;
+}
+
+header{
+  height: 50px;
+  width: 850px;
+
+}
+
+table, th, td {
+border: 2px solid brown;
+border-collapse: collapse;
+padding: 10px;
+}
+
+a{
+font-style: bold;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: brown;
+}
+a:hover {
+  color: indianred;
+}
 h1 {
-color: blue ;
-font-family: ;
+color: brown ;
 font-size: 24px;
 }
 
 h2 {
+color: brown ;
 font-size: 18px;
 }
 
