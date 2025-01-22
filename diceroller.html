@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>Dice Roller</title>
+
+    <style>
+        body, html {
+            margin: 20;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+
+        }
+        tr, td{
+        text-align: center;
+        font-size: 24px;
+        }
+
+        input {
+        width: 25px;
+        height: 25px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<script src="scripts.js"></script>
+
+
+<!--<button onclick="diceD6 ('result1')">1D6</button>-->
+<!--<h2 id = "result1" style= " width: 15px; padding: 6px; border: 1px, solid black;"></h2>-->
+
+
+<!--<button onclick="changeCellColor('hl_LA','salmon')">HIT</button>-->
+
+
+
+<!-- HIT LOCATION TABLE -->
+
+<table style = "width: 95%; border: 3px, solid black;">
+    <tr>
+        <td colspan="2" ><h2>Fire arc:</h2></td>
+        <td colspan ="3">
+            <button style= "width: 300px; height: 60px; background-color: pink; color: firebrick"
+                    onclick="diceD6 ('firstLocD6'); diceD6 ('secLocD6');
+                    addDice('firstLocD6','secLocD6','locResult');
+                    clearCellColoring();
+
+                    highlightHL('locResult')"><h2>Roll</h2></button>
+        </td>
+    </tr>
+    <tr>
+
+        <td> <input type="radio" id="Front" name="hitArcs" value="front" checked>
+            <label for="Front">Front</label>
+        </td>
+
+        <td><input type="radio" id="Rear" name="hitArcs" value="rear">
+            <label for="Rear">Rear</label>
+        </td>
+
+
+        <td  rowspan="2" style = "width: 10%; color: dimgray;"><h2 id = "firstLocD6">d6</h2>
+
+        </td>
+        <td  rowspan="2" style = "width: 10%; color: dimgray;"><h2 id = "secLocD6">d6</h2>
+
+        </td>
+        <td  rowspan="2" style = "width: 15%; color: firebrick;"><h1 id = "locResult"></h1>
+
+        </td>
+
+    </tr>
+    <tr>
+        <td><input type="radio" id="Left" name="hitArcs" value="left">
+            <label for="Left">Left</label>
+        </td>
+
+        <td>  <input type="radio" id="Right" name="hitArcs" value="right">
+            <label for="Right">Right</label>
+
+        </td>
+    </tr>
+
+
+
+
+
+</table>
+
+
+<!-- Hit locations diagram-->
+
+<table id = "hlTable" style = "position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+width: 80%; height: 350px; height: 50%; margin-bottom:100px;
+border-collapse: collapse;">
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td id = "hl_HD" style= "height: 10%;padding: 10px; border: 2px, solid black;">H</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <!-- First row with 5 columns -->
+    <tr >
+        <td id = "hl_LA" style= "width: 15px; height: 50px; padding: 6px; border: 2px, solid black;">LA</td>
+        <td id = "hl_LT" style= "width: 15px; padding: 6px; border: 2px, solid black;">LT</td>
+        <td id = "hl_CT" style= "width: 15px; padding: 6px; border: 2px, solid black;">CT</td>
+        <td id = "hl_RT" style= "width: 15px; padding: 6px; border: 2px, solid black;">RT</td>
+        <td id = "hl_RA" style= "width: 15px; padding: 6px; border: 2px, solid black;">RA</td>
+    </tr>
+
+    <!-- Second row with 2 cells aligned under columns 3 and 5 -->
+    <tr>
+        <td colspan="1"></td> <!-- Empty space under columns 1 and 2 -->
+        <td id = "hl_LL" style= "height: 50px; padding: 6px; border: 2px, solid black;" class="col-span">LL</td> <!-- Cell under column 3 -->
+        <td></td> <!-- Empty space under column 4 -->
+        <td id = "hl_RL" style= "padding: 6px; border: 2px, solid black;" class="col-span">RL</td> <!-- Cell under column 5 -->
+    </tr>
+</table>
+</body>
+</html>
