@@ -101,6 +101,10 @@ var secondDie = parseInt(document.getElementById(result2).innerHTML);
 console.log(secondDie);
 
 document.getElementById(totalId).innerHTML = parseInt(firstDie + secondDie);
+if(firstDie + secondDie == 2){
+document.getElementById("critFlag").innerHTML = "CRIT!!!";
+console.log("crit");
+}
 }
 
 
@@ -160,6 +164,7 @@ function clearCellColoring() {
       cell.style.backgroundColor = ""; // Set background color to default
     }
   }
+  document.getElementById("critFlag").innerHTML = "";
 }
 
 
