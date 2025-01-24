@@ -1,0 +1,21 @@
+header{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+  }
+
+h2{
+color: firebrick;
+font-style: italic;
+text-align: center;
+}
+
+#table{
+width: 100%;
+border-collapse: collapse;
+}
+
+table,tr,td{
+border: 1px, solid black;
+}
+
