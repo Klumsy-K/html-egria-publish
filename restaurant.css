@@ -16,7 +16,9 @@ border-collapse: collapse;
 }
 
 table,tr,td{
-border: 1px, solid black;
+border: 5px, solid tan;
+text-align: center;
+vertical-align: middle;
 }
 
 ul {
