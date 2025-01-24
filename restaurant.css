@@ -19,3 +19,7 @@ table,tr,td{
 border: 1px, solid black;
 }
 
+ul {
+  list-style-type: none;
+}
+
