@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Hands-On Practice</title>
+
+    <style>
+        @keyframes rainbow_animation {
+            0%   {background-position: 0 0;}
+
+            100% {background-position: 0 -200%;}
+        }
+    </style>
+</head>
+<body>
+
+<script src = "js/jsform.js"></script>
+
+<header style="height: 60px; width: 600px;"><h1>Can you type the same word ...
+    <span style="background: linear-gradient(to bottom left, blue, green, yellow, orange, red, magenta, violet, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 1s ease-in-out infinite;
+    background-size: 100% 200%;">
+        TWICE ???
+    </span>
+</h1>
+</header>
+
+
+
+<form style="height: 50px; width: 600px; padding: 20px;">
+    <label for="input1">Word:</label>
+    <input id="input1" title="5 chars min" type="text" pattern=".{5,}">
+
+    <label for="input2">Again, the word:</label>
+    <input id="input2" type="text">
+    <p id="message"></p>
+</form>
+<div style=" width: 500px; text-align: right;">
+    <button style="vertical-align: right;" onclick="CompareValues('input1','input2')">SHMEH?</button></div>
+
+
+</body>
+</html>
