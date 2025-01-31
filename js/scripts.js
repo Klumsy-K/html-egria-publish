@@ -50,6 +50,8 @@ async function runIterations(iterations, min, max, resultId) {
     }
 }
 
+// ROLL 1D6
+
 async function diceD6 (resultId){
     const iterations = randomInt(5,12);
 //    return runIterations(iterations,1,6);
@@ -57,6 +59,7 @@ async function diceD6 (resultId){
 }
 
 
+// DELAY FUNCTION
 
 function sleep(milliseconds, multiplier) {
 const totalDelay = milliseconds * multiplier;
@@ -87,11 +90,9 @@ function delay(milliseconds, multiplier) {
     });
 }
 
-
+// ADD DICE RESULTS FUNC
 
 async function addDice (result1, result2, totalId){
-
-
 
 await sleep (1500,1);
 
@@ -104,6 +105,9 @@ document.getElementById(totalId).innerHTML = parseInt(firstDie + secondDie);
 if(firstDie + secondDie == 2){
 document.getElementById("critFlag").innerHTML = "CRIT!!!";
 console.log("crit");
+}
+if (firstDie + secondDie == 12){
+document.getElementById("critFlag").innerHTML = "HEADSHOT!"
 }
 }
 
